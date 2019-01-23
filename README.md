@@ -28,3 +28,8 @@ http://news.ustc.edu.cn/xwbl/201509/t20150925_227934.html
 
 项目的中文介绍页面： 
 http://seis.ustc.edu.cn/research/hurricane-sandy/
+
+**源码说明**
+
+src/cal_omp.c:应用openmp并行计算不同台站对地震信号的互相关，并从中提取出地震信号到两个台站之间的走时差，并存储。
+src_locate/project.c:使用cal_omp计算出的台站间地震波走时差，定位飓风激发的地震源位置
