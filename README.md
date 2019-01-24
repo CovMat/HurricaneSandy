@@ -1,5 +1,19 @@
 # HurricaneSandy
 
+**Microseismic Sources during Hurricane Sandy**
+
+In this research, we studied the secondary microseismic signals excited by Hurricane Sandy recorded at USArray stations in the east of U.S. In one-hour time window, we found these signals were only correlated among stations aligned along close azimuths from the hurricane center. The travel-time differences were measured between the correlated stations, and these measurements were used to determine the source locations. We attributed these correlated seismic signals to two types of seismic sources, with one group of the seismic signals from the hurricane center and the other from coastal region. We further developed a hurricane seismic source model, to quantitatively describe the coupling among sea level pressure fluctuations, ocean waves and solid earth in the region of hurricane center. We also identified a strong seismic source near the coastal region in New England after Sandy’s dissipation, possibly related to subsequent storm surge in the area.
+
+**Peer-reviewed Publication**
+Chen, X., Tian, D., & Wen, L. (2015). Microseismic sources during Hurricane Sandy. Journal of Geophysical Research: Solid Earth, 120(9), 6386–6403. doi:10.1002/2015JB012282. 
+
+**report of Science News Magazine**
+https://www.sciencenews.org/article/hurricane%E2%80%99s-tiny-earthquakes-could-help-forecasters 
+
+```src/cal_omp.c```: (OpenMP parallel computation) Source code of computing cross-correlation between two stations, and determining the travel-time differences of the seismic signals from seismic source to stations.
+
+```src_locate/project.c```: Source code of locating source positions, using the results given by cal_omp
+
 **项目描述**：
 
 飓风是极具破坏力的自然现象之一，目前传统的飓风监测方法依赖于卫星、飞机与地面气象观测，而这些监测手段都具有很大的局限性。比如卫星不能很好地观测到飓风强度的急剧变化，且当飓风丧失一些热带气旋特征时，卫星观测手段就难以估计其强度。而气象监测部门的侦查飞机则无法对飓风内部的结构进行有效、持续和全面的观测，地面气象观测台站更是远离飓风中心，无法直接监测飓风中心的强度和结构。 
